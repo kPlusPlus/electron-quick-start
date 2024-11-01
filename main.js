@@ -1,3 +1,5 @@
+let $ = jQuery = require('jquery');
+
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
 const path = require('node:path')
@@ -11,7 +13,7 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
-
+  mainWindow.$ = $;
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
 

@@ -1,3 +1,32 @@
 /* styles.css */
 
 /* Add styles here to customize the appearance of your app */
+
+.intro {
+    background-color: yellowgreen !important;
+    font-size: 18;
+    font-weight: bolder;    
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: darkslateblue;
+    color:yellowgreen;
+    font-size: 20;
+    font-weight: bolder;
+    position: absolute;
+    top:0px !important;
+    width: 100% !important;
+}
+
+.footer {
+    background-color: darkslateblue;
+    color:yellow;
+    font-size: 20;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 0px !important;
+    width: 100% !important;
+    
+}

@@ -3,17 +3,37 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+     <!-- 
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">    
+  -->
     <link href="./styles.css" rel="stylesheet">
     <title>Hello World!</title>
   </head>
-  <body>
+  <body> 
+    <script>
+      function HelloWorld() {
+        alert("Hello World!");
+        alert($("#tipka"));
+      }
+
+
+      $(document).ready(function(){
+      $("p").click(function(){
+        $(this).hide();
+      });
+    });
+
+    </script>   
+    <p class="header">My supper application</p>
     <h1>Hello World!</h1>
     We are using Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    and Electron <span id="electron-version"></span>.    
+    <p class="footer">kPlusPlus </p>    
+    <input id="tipka" type="button" value="Stisni" onclick="HelloWorld();">        
+    <!-- script engine -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./renderer.js">
+    </script>
   </body>
 </html>
