@@ -16,12 +16,25 @@
         alert($("#tipka"));
       }
 
-
-      $(document).ready(function(){
-      $("p").click(function(){
-        $(this).hide();
-      });
-    });
+      function TestAPI() {
+        $.ajax({
+          url: "https://catfact.ninja/fact", // API endpoint
+          type: "GET", // HTTP method: GET, POST, PUT, DELETE
+          dataType: "json", // Data type expected from the server
+          headers: {
+              "Authorization": "Bearer YOUR_API_TOKEN" // Optional: API key or token
+          },
+          success: function(response) {
+              // Handle a successful response
+              alert(response);
+          },
+          error: function(xhr, status, error) {
+              // Handle any errors
+              alert("Error: " + error);
+          }
+        });
+        alert("TEST API!");
+      }      
 
     </script>   
     <p class="header">My supper application</p>
@@ -29,8 +42,10 @@
     We are using Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
     and Electron <span id="electron-version"></span>.    
+    <p>only for a test</p>
     <p class="footer">kPlusPlus </p>    
     <input id="tipka" type="button" value="Stisni" onclick="HelloWorld();">        
+    <input id="TestAPI" type="button" value="TestAPI" onclick="TestAPI();"> 
     <!-- script engine -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./renderer.js">
