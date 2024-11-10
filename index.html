@@ -13,10 +13,13 @@
     <script>
       function HelloWorld() {
         alert("Hello World!");
-        alert($("#tipka"));
+        alert($("#timas").val());
       }
 
       function TestAPI() {
+
+        $('#timas').val('123456');
+
         $.ajax({
           url: "https://catfact.ninja/fact", // API endpoint
           type: "GET", // HTTP method: GET, POST, PUT, DELETE
@@ -27,6 +30,7 @@
           success: function(response) {
               // Handle a successful response
               alert(response);
+              $('#timas').val('sve je ok !!!');
           },
           error: function(xhr, status, error) {
               // Handle any errors
@@ -44,6 +48,7 @@
     and Electron <span id="electron-version"></span>.    
     <p>only for a test</p>
     <p class="footer">kPlusPlus </p>    
+    <input type="text" value="000" id="timas">
     <input id="tipka" type="button" value="Stisni" onclick="HelloWorld();">        
     <input id="TestAPI" type="button" value="TestAPI" onclick="TestAPI();"> 
     <!-- script engine -->
