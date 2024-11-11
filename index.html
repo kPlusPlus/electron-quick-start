@@ -41,16 +41,22 @@
       }      
 
     </script>   
-    <p class="header">My supper application</p>
+    <div class="header">My supper application</div>
+
+    <div class="main-content">
     <h1>Hello World!</h1>
     We are using Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
     and Electron <span id="electron-version"></span>.    
     <p>only for a test</p>
-    <p class="footer">kPlusPlus </p>    
+    
     <input type="text" value="000" id="timas">
     <input id="tipka" type="button" value="Stisni" onclick="HelloWorld();">        
     <input id="TestAPI" type="button" value="TestAPI" onclick="TestAPI();"> 
+
+    <button class="btn btn-primary">Button bootstrap</button>
+    </div>
+    <div class="footer">kPlusPlus 2024.</div>
     <!-- script engine -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./renderer.js">
